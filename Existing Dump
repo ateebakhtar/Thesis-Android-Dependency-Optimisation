@@ -1,0 +1,153 @@
+Looking into Android Build Process
+
+Crude steps:
+Step 1: Resource Compilation
+Step 2 : Source Code Compilation
+Step 3: Shrinking, Obfuscation, and Optimization
+Step 4: Dalvik Bytecode (DEX Files) Generation
+Step 5: Packaging
+
+Taken from https://shishirthedev.medium.com/build-process-in-android-8c955d6467b8
+
+Using this same info, and an actual build step of a personal application (used GPT to group build steps and the steps mentioned above)
+
+1. Resource Compilation
+This phase processes all app resources (e.g., XML layouts, strings, drawables).
+
+:app:mergeDebugNativeDebugMetadata NO-SOURCE
+:app:generateDebugResValues UP-TO-DATE
+:app:generateDebugResources UP-TO-DATE
+:app:mergeDebugResources UP-TO-DATE
+:app:packageDebugResources UP-TO-DATE
+:app:parseDebugLocalResources UP-TO-DATE
+:app:processDebugGoogleServices UP-TO-DATE
+
+2. Source Code Compilation
+In this phase, the app’s Java/Kotlin source code is compiled.
+
+:app:javaPreCompileDebug UP-TO-DATE
+:app:compileDebugJavaWithJavac UP-TO-DATE
+:app:compileDebugKotlin UP-TO-DATE
+:app:kaptGenerateStubsDebugKotlin UP-TO-DATE
+:app:kaptDebugKotlin UP-TO-DATE
+:app:hiltJavaCompileDebug UP-TO-DATE
+:app:hiltAggregateDepsDebug UP-TO-DATE
+
+3. Shrinking, Obfuscation, and Optimization
+Optional steps for code shrinking, obfuscation, and optimization.
+
+:app:desugarDebugFileDependencies
+:app:checkDebugDuplicateClasses UP-TO-DATE
+
+
+
+
+4. Dalvik Bytecode (DEX Files) Generation
+This step converts compiled .class files to .dex files for the Android runtime.
+
+:app:mergeLibDexDebug
+:app:dexBuilderDebug
+:app:mergeProjectDexDebug
+
+5. Packaging
+Packaging resources, DEX files, and native libraries into an APK.
+
+:app:packageDebug
+:app:assembleDebug
+:app:validateSigningDebug UP-TO-DATE
+:app:writeDebugSigningConfigVersions
+:app:writeDebugAppMetadata UP-TO-DATE
+
+
+Other findings
+Proguard
+R8
+D8
+Dex files
+ART (Android runtime)
+
+
+Android Java/Kotlin fines have to be converted to dex files, for the android OS to read and execute them, D8 is a compiler that converts class files to dex files.
+
+Android has Proguard capability to minimize the size of the APK. ProGuard is a free Java app for Android that allows us to do the following:
+Reduce (minimize) the code: Unused code in the project should be removed.
+Code obfuscation: Rename the names of classes, fields, and so on.
+Improve the code: Inline the functions, for example.
+https://www.geeksforgeeks.org/proguard-in-android/
+
+
+To make your Android app smaller, enable shrinking in the release build. Shrinking, using R8, removes unused code and resources, offers obfuscation to shorten class names, and applies optimization. The Android Gradle plugin (v3.4.0+) uses R8 instead of ProGuard for these tasks. It performs:
+
+Code Shrinking: Detects and safely removes unused code from your app and its libraries, helpful for avoiding the 64k reference limit.
+Resource Shrinking: Removes unused resources from your app, working in tandem with code shrinking.
+Obfuscation: Shortens class and member names, reducing DEX file sizes.
+Optimization: Analyzes and optimizes your code further.
+https://medium.com/@attilaptkai/proguard-everything-you-need-to-know-bb5ff9c04bcd
+
+Other resources that were a interesting read
+
+Compile time tasks done by R8
+
+Code shrinking (or tree-shaking)
+Resource shrinking
+Optimization
+Obfuscation (or identifier minification)
+
+When building the release version of your app, R8 can be configured to perform the compile-time tasks described above for you. You can also disable certain tasks or customize R8's behavior through ProGuard rules files.
+
+https://developer.android.com/build/shrink-code
+
+Proguard Limitation:
+
+https://www.dre.vanderbilt.edu/~schmidt/android/android-4.0/external/proguard/docs/manual/limitations.html
+https://www.appsealing.com/proguard/
+https://github.com/Guardsquare/proguard/issues
+
+We can install proguard separately and run and see results from https://sourceforge.net/projects/proguard/
+
+R8
+R8 is a compiler that converts class files to dex files, just like D8, but additionally it has options like proguard for Code shrinking (or tree-shaking), Resource shrinking, Optimization, Obfuscation (or identifier minification), its the newer method from using proguard.
+
+
+R8 retrace is a tool for obtaining the original stack trace from an obfuscated stack trace. The stack trace is reconstructed by matching class and method names in a mapping file to their original definitions. R8 retrace uses a generated mapping file for mapping obfuscated class and method names back to the original definition. For more information about shrinking your app so that it can be retraced correctly
+
+https://developer.android.com/tools/retrace
+
+Some more nice reading on R8 https://jebware.com/blog/?p=553
+
+
+We can also see the size of the apk and its distribution, in terms of external libraries, resources and dex files, attached a sample of a personal application (debug build)
+
+
+
+
+This technique was extracted from
+https://stackoverflow.com/questions/60878599/error-building-android-library-direct-local-aar-file-dependencies-are-not-supp/70074787#70074787
+https://developer.android.com/studio/debug/apk-analyzer
+
+
+Legacy issues of using to many external dependencies https://developer.android.com/build/multidex
+
+ART instead of Delvin, the newer method to run dex files https://source.android.com/docs/core/runtime
+
+Additional reading on ART: https://developer.android.com/guide/practices/verifying-apps-art
+
+
+
+
+
+
+
+
+
+Research that maybe useful (haven't read them fully)
+Extracting 3rd party libraries from obfuscated APK’s https://essay.utwente.nl/86069/
+Comparative analysis of obfuscation and deobfuscation, mainly focusing on R8 and a few other tools https://jisis.org/wp-content/uploads/2022/11/jisis-2021-vol11-no1-01.pdf
+Optimized build pipeline suggestions https://dl.acm.org/doi/abs/10.1145/3578357.3591219
+Calculating the similarity between apps (based on bytecode or binary code), and for evaluating their robustness to evolving optimization and obfuscation techniques. https://www.ieee-security.org/TC/SP2022/downloads/SP22-posters/sp22-posters-8.pdf
+New size reduction concepts and methods https://ieeexplore.ieee.org/abstract/document/9616819
+Minimizing Android Applications with Intelligent Monitoring-Based Debloating https://dl.acm.org/doi/abs/10.1145/3597503.3639113
+EDAroid: An Efficient Dynamic Analysis Tool for Android Applications https://dl.acm.org/doi/abs/10.1145/3400286.3418266
+How Does Code Optimization Impact Third-party Library Detection for Android Applications? https://xzf1234.github.io/pdfs/ASE24_LibHunter.pdf
+
+

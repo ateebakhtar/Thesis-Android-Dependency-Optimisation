@@ -9,7 +9,7 @@ The complete picture as it stands, we step into each step with research paper an
 Steps possibly identified in the 1st phase **Key Performance Issues**, we extract papers that target that have 
 keywords of performance issues, optimisation, android, dependencies optimisation, APK size, memory consumption, CPU usage, battery efficiency and if other keywords also fit
 
-![drawing](assests/issue searching small.png)
+![drawing](assests/issue_searching_small.png)
 
 ### 2nd phase: 
 

@@ -1,4 +1,4 @@
-##Research that maybe useful (haven't read them fully) 
+## Research that maybe useful (haven't read them fully) 
 
 - Extracting 3rd party libraries from obfuscated APK’s https://essay.utwente.nl/86069/ 
 - Comparative analysis of obfuscation and deobfuscation, mainly focusing on R8 and a few other tools https://jisis.org/wp-content/uploads/2022/11/jisis-2021-vol11-no1-01.pdf 

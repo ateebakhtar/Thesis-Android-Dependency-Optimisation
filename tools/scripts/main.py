@@ -1,8 +1,3 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
 
 import os
 import subprocess
@@ -14,7 +9,7 @@ import csv
 REPO_URL = "https://github.com/ateebakhtar/Munazam-A-StudentOrganizer.git"  # Replace with repo URL
 PROJECT_DIR = "/Users/ateeb/PycharmProjects/AndroidApplicationCompilation/android-app"  # Where the repo will be cloned
 OUTPUT_FILE = "apk_analysis_results.json"  # Output file
-APK_ANALYZER_PATH = "/Users/ateeb/Library/Android/sdk/cmdline-tools/latest/bin/apkanalyzer"  # Update to your apkanalyzer path
+APK_ANALYZER_PATH = "apkanalyzer"  # Update to your apkanalyzer path
 
 def clone_repo():
     """Clone the Android project."""
@@ -104,6 +99,7 @@ def parse_and_filter_apk_data(raw_output):
     return filtered_data
 
 def main():
+
     clone_repo()
 
     apk1, apk2 = build_apks()
@@ -119,6 +115,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-

@@ -19,3 +19,5 @@ sample [**output**](./recommendation/script/repoAnalysis/dependency_tree.csv)
   [**output**](/recommendation/script/dataset/RepoLinkExtraction/github_links.csv)
 
 ### Filtered Applications flow  [**here**](/recommendation/script/dataset/filteredApplication/filtered.md)
+
+### Dependency Extraction flow  [**here**](/recommendation/script/dataset/dependencyParsing/dependencyExtraction.md)

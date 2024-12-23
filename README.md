@@ -18,4 +18,4 @@ sample [**output**](./recommendation/script/repoAnalysis/dependency_tree.csv)
 - Script for extracting repository links from github can be found [**here**](/recommendation/script/dataset/RepoLinkExtraction/extractRepos.py) and its
   [**output**](/recommendation/script/dataset/RepoLinkExtraction/github_links.csv)
 
-###   [**Filtered Applications flow**](/recommendation/script/dataset/filteredApplication/filtered.md)
+### Filtered Applications flow  [**here**](/recommendation/script/dataset/filteredApplication/filtered.md)

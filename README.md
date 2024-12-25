@@ -15,9 +15,9 @@ level ideas. This is the 1st version, more updates will happens when the working
   [**output**](./tools/scripts/filtered_apk_data.csv)
 - Script for extracting dependency tree for an application is placed [**here**](./recommendation/script/repoAnalysis/main.py) and its 
 sample [**output**](./recommendation/script/repoAnalysis/dependency_tree.csv)
-- Script for extracting repository links from github can be found [**here**](/recommendation/script/dataset/RepoLinkExtraction/extractRepos.py) and its
-  [**output**](/recommendation/script/dataset/RepoLinkExtraction/github_links.csv)
+- Script for extracting repository links from github can be found [**here**](/recommendation/script/RepoLinkExtraction/extractRepos.py) and its
+  [**output**](/recommendation/script/RepoLinkExtraction/github_links.csv)
 
-### Filtered Applications flow  [**here**](/recommendation/script/dataset/filteredApplication/filtered.md)
+### Filtered Applications flow  [**here**](/recommendation/script/filteredApplication/filtered.md)
 
-### Dependency Extraction flow  [**here**](/recommendation/script/dataset/dependencyParsing/dependencyExtraction.md)
+### Dependency Extraction flow  [**here**](/recommendation/script/dependencyParsing/dependencyExtraction.md)

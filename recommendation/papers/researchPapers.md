@@ -14,3 +14,5 @@
   Development (https://sci-hub.se/10.1109/ACCESS.2020.2976884)
 - Diversified Third-Party Library Prediction for
   Mobile App Development (https://sci-hub.se/10.1109/TSE.2020.2982154)
+- LibRadar: Fast and Accurate Detection of Third-party
+  Libraries in Android Apps (https://sci-hub.se/https://doi.org/10.1145/2889160.2889178)

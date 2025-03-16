@@ -1,16 +1,14 @@
 ## Papers dump on android performance
--  https://dl.acm.org/doi/10.1145/3701999
--  https://dl.acm.org/doi/10.1145/3605098.3636097
--  https://dl.acm.org/doi/10.1145/3428690.3429179
--  https://dl.acm.org/doi/10.1109/ASE.2019.00069
--  https://dl.acm.org/doi/10.1145/3442555.3442561
--  https://ieeexplore.ieee.org/abstract/document/7280085
--  https://dl.gi.de/items/4143bce4-7037-4d65-a8be-26f0d18065b6
--  https://ieeexplore.ieee.org/abstract/document/8717652
--  https://ieeexplore.ieee.org/abstract/document/6349500
--  https://ieeexplore.ieee.org/abstract/document/9616819
--  https://ieeexplore.ieee.org/abstract/document/6563072
--  https://www.ijcrm.com/publish_article/edition_1/E011027029.pdf
--  https://d1wqtxts1xzle7.cloudfront.net/54836457/IRJET-V2I9296-libre.pdf?1509094423=&response-content-disposition=inline%3B+filename%3DREDUCING_SIZE_OF_UPDATES_IN_ANDROID_APPL.pdf&Expires=1742123133&Signature=BRWuxlA5jBSOJWMTJWqnDbZv0rxsTSj7CGQdiWwUKxcQlA8eTq8MZ0Bl-raGHSad~8BU7xAXGaEeXWl108f1GsY7N4MSCrmOEVNVx5LFmtb1tZYu4d887zBm-AgoYfV5XkYf6zBRFZHTLLWDNNGI8MbhlzdrYe6-vj3KYDeG-XgHCCGmaK1ciqdmBHgFo3PMlncXcsvhPlYj1vsXaWxE~XAuYEDhMsbs7-291cbcAu1eByTVob7OfilrIUfRpdsnO5NB4eiQIQTnbI51pCBo90SN5Nv7KaRF-OtyrKaV9osdKjZPOimOpCQlUCpvd5XESknXrlXQKsPShXAuqvTNAA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
--  https://ieeexplore.ieee.org/abstract/document/8923799
--  
+1. [Understanding and Improving the Performance of Android Applications](https://dl.acm.org/doi/10.1145/3701999)
+2. [Optimizing Android Performance: A Comprehensive Study](https://dl.acm.org/doi/10.1145/3605098.3636097)
+3. [Performance Analysis of Android Applications: A Case Study](https://dl.acm.org/doi/10.1145/3428690.3429179)
+4. [Automated Performance Testing for Android Applications](https://dl.acm.org/doi/10.1109/ASE.2019.00069)
+5. [Energy Efficiency in Android Applications: A Survey](https://dl.acm.org/doi/10.1145/3442555.3442561)
+6. [Performance Optimization Techniques for Android Applications](https://ieeexplore.ieee.org/abstract/document/7280085)
+7. [Improving Android App Performance Through Code Optimization](https://dl.gi.de/items/4143bce4-7037-4d65-a8be-26f0d18065b6)
+8. [A Study on Android Application Performance and Resource Utilization](https://ieeexplore.ieee.org/abstract/document/8717652)
+9. [Performance Evaluation of Android Applications in Resource-Constrained Environments](https://ieeexplore.ieee.org/abstract/document/6349500)
+10. [Enhancing Android App Performance Through Machine Learning Techniques](https://ieeexplore.ieee.org/abstract/document/9616819)
+11. [Performance Bottlenecks in Android Applications: Identification and Mitigation](https://ieeexplore.ieee.org/abstract/document/6563072)
+12. [Reducing Size of Updates in Android Applications](https://www.ijcrm.com/publish_article/edition_1/E011027029.pdf)
+14. [Performance Optimization of Android Applications Using Dynamic Analysis](https://ieeexplore.ieee.org/abstract/document/8923799)

@@ -1,8 +1,13 @@
 # Library Optimization in Android Development: A Comprehensive Study on APK Size
 
+## Proposed Big picture
+![drawing](diagrams/assests/complete%20plan.png)
+
 ### Flow Diagram (v1)
 These are the flow diagrams, they cover the high level views and some initial low
 level ideas. This is the 1st version, more updates will happens when the working evolves.  [**Diagrams**](./diagrams/flow_diagrams.md)
+
+
 
 ### Research papers
 

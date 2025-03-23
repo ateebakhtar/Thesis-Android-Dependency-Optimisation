@@ -7,7 +7,8 @@
 These are the flow diagrams, they cover the high level views and some initial low
 level ideas. This is the 1st version, more updates will happens when the working evolves.  [**Diagrams**](./diagrams/flow_diagrams.md)
 
-
+### Resource management 
+Content with references for resource management portion for thesis is mentioned [**here**](./resource-managment/resourceManagment.md) and their respective sources [**here**](./resource-managment/raw/rawPapers.md)
 
 ### Research papers
 

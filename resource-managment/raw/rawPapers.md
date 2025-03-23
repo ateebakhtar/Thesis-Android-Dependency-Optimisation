@@ -5,7 +5,7 @@
 4. Research on the Relationship between APP Size and Installation Time in Intelligent Mobile Devices (https://ieeexplore.ieee.org/abstract/document/8923799) PDF not found
 5. Comparison of Memory Consumptive Against the Use of Various Image Formats for App Onboarding Animation Assets on Android with Lottie JSON (https://sci-hub.se/10.1109/IC2IE50715.2020.9274612)
 6. RedDroid: Android Application Redundancy Customization Based on Static Analysis (https://sci-hub.se/10.1109/ISSRE.2018.00029)
-7. LegoDroid: flexible Android app decomposition and instant installation (https://link.springer.com/article/10.1007/s11432-021-3528-7)
+7. LegoDroid: flexible Android app decomposition and instant installation (https://link.springer.com/article/10.1007/s11432-021-3528-7) PDF not found
 8. Integration of static analysis results with ProGuard optimizer for Android applications (https://pergamos.lib.uoa.gr/uoa/dl/object/2073434/file.pdf)
 9. Automated Test Selection for Android Apps Based on APK and Activity Classification (https://sci-hub.se/10.1109/ACCESS.2020.3029735)
 10. Where did my 256 GB go? A Measurement Analysis of Storage Consumption on Smart Mobile Devices (https://sci-hub.se/https://doi.org/10.1145/3460095)
@@ -15,6 +15,17 @@
 14. Instant delivery of commercial Android applications with “Google Play Instant" (https://lutpub.lut.fi/bitstream/handle/10024/162016/thesis_final.pdf?sequence=1&isAllowed=y)
 15. JNFuzz-Droid: A Lightweight Fuzzing and Taint Analysis Framework for Android Native Code (https://ieeexplore.ieee.org/abstract/document/10589738) PDF not found
 16. Building Complex Augmented Reality User Manuals: Dynamic Modular Assembly on Demand (https://ieeexplore.ieee.org/abstract/document/10467138) PDF not found
+17. Of Ahead Time: Evaluating Disassembly of Android Apps Compiled to Binary OATs Through the ART (https://dl.acm.org/doi/pdf/10.1145/3578357.3591219)
+18. How Does Code Optimization Impact Third-party Library Detection for Android Applications? (https://dl.acm.org/doi/10.1145/3691620.3695554) PDF not found
+19. MiniMon: Minimizing Android Applications with Intelligent Monitoring-Based Debloating (https://dl.acm.org/doi/pdf/10.1145/3597503.3639113)
+20. ApkDiff: Matching Android App Versions Based on Class Structure (https://dl.acm.org/doi/10.1145/3560831.3564257) PDF not found
+21. Automatically Detecting Incompatible Android APIs (https://dl.acm.org/doi/10.1145/3624737) PDF not found
+22. DeltaDroid: Dynamic Delivery Testing in Android (https://dl.acm.org/doi/pdf/10.1145/3563213)
+23. What is R8 and how we enabled it (https://stefma.medium.com/what-is-r8-and-how-we-enabled-it-4f5764a7ff9c)
+24. Shrink, obfuscate, and optimize your app (https://developer.android.com/build/shrink-code)
+25. Optimize your build speed (https://developer.android.com/build/optimize-your-build)
+
+
 
 
 

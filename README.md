@@ -2,13 +2,11 @@
 
 ## Proposed Big picture
 
-
-### Big picture
 This is the proposed big picture of the current progress and overall idea  [**here**](diagrams/assests/complete%20plan.png). This covers all aspects to make the thesis document.
 
 This is an alternate approach, that we might consider moving forward with [**here**](diagrams/assests/thesis_plan_2.png).
 
-### Resource management 
+## Resource management 
 Content with references for resource management portion for thesis is mentioned [**here**](./resource-managment/resourceManagment.md) and their respective sources [**here**](./resource-managment/raw/rawPapers.md)
 
 ### Research papers

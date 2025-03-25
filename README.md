@@ -1,11 +1,12 @@
 # Library Optimization in Android Development: A Comprehensive Study on APK Size
 
 ## Proposed Big picture
-![drawing](diagrams/assests/complete%20plan.png)
 
-### Flow Diagram (v1)
-These are the flow diagrams, they cover the high level views and some initial low
-level ideas. This is the 1st version, more updates will happens when the working evolves.  [**Diagrams**](./diagrams/flow_diagrams.md)
+
+### Big picture
+This is the proposed big picture of the current progress and overall idea  [**here**](diagrams/assests/complete%20plan.png). This covers all aspects to make the thesis document.
+
+This is an alternate approach, that we might consider moving forward with [**here**](diagrams/assests/thesis_plan_2.png).
 
 ### Resource management 
 Content with references for resource management portion for thesis is mentioned [**here**](./resource-managment/resourceManagment.md) and their respective sources [**here**](./resource-managment/raw/rawPapers.md)

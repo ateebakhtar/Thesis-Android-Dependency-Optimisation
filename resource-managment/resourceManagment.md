@@ -127,6 +127,21 @@ In conclusion, the provided literature underscores the significance of software 
 
 - Running devices would initially receive only the hot code, with cold code remaining on a remote server and transmitted only when necessary [Code and File Compaction Techniques].
 
+### Tools used in the research
+
+- R8: This is the default compiler in the Android build process (when using Android Gradle Plugin 3.4.0 or higher) that performs code shrinking (tree-shaking) to remove unused code, obfuscation (identifier minification) to shorten class and member names, and optimization to improve runtime performance and reduce DEX file sizes. It also performs resource shrinking when enabled. R8 works with ProGuard rules files.
+- ProGuard: While R8 is the current default, ProGuard was the previous tool used for code shrinking and obfuscation in Android. R8 is designed to be backward compatible with ProGuard rules.
+- REDDROID: This is a prototype tool that uses static analysis to identify and remove compile-time redundancy (like unused code and classes in libraries) and install-time redundancy (like multiple SDKs and embedded ABIs) from Android applications. It includes components like a call graph builder, reflection solver, and code reducer.
+- MiniMon: This framework focuses on debloating Android apps based on monitoring user interactions to identify desired features and removing unused ones. It uses static analysis to generate a call graph and then applies program analysis techniques, graph clustering, and graph embedding to generalize from logs and identify related methods to keep.
+- Lint: This tool helps Android developers remove registered but unused resources located in the res directory of an Android project. It scans code and resource files to detect if a resource is ever referred to by its ID.
+- Android App Bundle: This is a new publishing format for Android apps that enables dynamic delivery. Instead of a single APK, developers upload an AAB, and Google Play generates and serves optimized APKs for each user's device configuration, reducing the initial download size.
+- Play Feature Delivery: This utilizes the capabilities of App Bundles to allow certain features of an app to be delivered conditionally or downloaded on demand after the initial installation. This helps in reducing the initial app size.
+- Install-time Redundancy Removal Tools: These are techniques (often implemented with tools like shell scripts, as done in REDDROID) to remove unnecessary files from the APK after it has been built, based on the target device's characteristics. This includes removing unused native libraries (ABIs) for different CPU architectures and redundant components for other platforms (e.g., Android Wear).
+- AAPT2 (Android Asset Packaging Tool 2): This Android build tool generates keep rules for R8 based on references in the app's manifest, layouts, and other resources, ensuring that necessary elements are not removed during shrinking.
+- ResConfig: This property in the Android Gradle Plugin allows developers to remove unused alternative resources, such as language localizations that are not needed by the app.
+- tools:keep and tools:discard: These attributes can be used in XML resource files to explicitly specify resources that should be kept or removed by the resource shrinker.
+- ReDex: This is an Android bytecode optimizer developed by Facebook. It works at the bytecode level to perform optimizations like minification, compression, inlining, and dead code elimination, aiming to further reduce the size and improve the performance of Android apps.
+
 #### References
 
 1. N. Ghorbani et al., "MiniMon: Minimizing Android Applications with Intelligent Monitoring-Based Debloating," in *Proc. Int. Conf. Softw. Eng. (ICSE)*, Lisbon, Portugal, Apr. 14–20, 2024.
